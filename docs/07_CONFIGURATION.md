@@ -1,0 +1,3 @@
+# Policy schema and defaults
+
+Sample policies in `config/default.json`, `strict.json`, and `scenario_policy.json`. Validate port range 8000–8999, bind `127.0.0.1`, only `/health` and `/version` endpoints, no hostname fields beyond loopback. Restrict timeouts: 0.1–5 seconds, max attempts 1–15, backoff <=1 second, retention >=1 day and <=365 days. Unknown fields should warn/reject consistently. Do not enable raw user commands or arbitrary executable paths. Log the effective sanitized policy without secrets. Allow separate active/candidate ports to avoid stopping healthy service during validation.

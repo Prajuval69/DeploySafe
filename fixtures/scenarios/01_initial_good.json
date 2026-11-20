@@ -1,0 +1,11 @@
+{
+  "description": "Deterministic localhost-only deploy test; no OS service changes",
+  "expected_active_version": "1.0.0",
+  "expected_failure_code": "NONE",
+  "expected_outcome": "SUCCESS",
+  "initial_active_version": null,
+  "release_id": "1.0.0",
+  "requires_admin": false,
+  "requires_cloud": false,
+  "scenario_id": "01_initial_good"
+}

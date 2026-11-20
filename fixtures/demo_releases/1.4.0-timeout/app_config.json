@@ -1,0 +1,5 @@
+{
+  "bind": "127.0.0.1",
+  "mode": "slow_health",
+  "version": "1.4.0-timeout"
+}

@@ -1,0 +1,3 @@
+# Command-line contracts
+
+Use `python -m deploysafe`: `doctor` validates runtime and ports; `init --config PATH` prepares sandbox; `list-releases` enumerates trusted samples; `validate-release --release PATH` dry-runs checks; `deploy --release PATH` performs deployment; `rollback --to VERSION` reverts to prior verified version; `status --json` and `history --limit N`; `demo --scenario ID` / `demo --all`; `dashboard --port 8787`; `stop-demo` cleans up only owned demo subprocesses. Exit 0 success, 2 invalid input, 3 preflight failed, 4 deployment failed/rolled back, 5 recovery failed, 6 lock/concurrency conflict. Clear --help examples. Keep stdout machine-readable with --json and errors to stderr.

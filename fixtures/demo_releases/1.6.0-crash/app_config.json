@@ -1,0 +1,5 @@
+{
+  "bind": "127.0.0.1",
+  "mode": "crash",
+  "version": "1.6.0-crash"
+}

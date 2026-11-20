@@ -1,0 +1,3 @@
+# Owned process management
+
+Start only trusted staged `app.py` via `Popen([sys.executable, str(app_py), "--port", str(port), "--config", str(config_path)], cwd=release_dir, shell=False)`. Assign distinct localhost ports to candidate and active service. Keep `Popen` handles and an owned registry with PID, launch time, release ID and workspace identity. Before terminating a process, verify ownership rather than only matching PID; never terminate unrelated OS processes. Prefer normal terminate/short bounded wait, then kill only confirmed child. Redirect stderr/stdout into bounded log files; don't spawn detached services. Handle orphaned process state cautiously across CLI invocations; use a documented managed supervisor or control process. All probes use 127.0.0.1.

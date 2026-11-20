@@ -1,0 +1,3 @@
+# Threat model and failure discipline
+
+Threats: manifest path traversal, symlink escape, arbitrary code execution, release substitution, PID reuse, process collision, localhost service misuse, secrets in logs, malicious config, concurrency race, interrupted process, orphaned children, log growth, dashboard XSS, SQLite injection, unbounded retries. Mitigations: release allowlist, only bundled trusted apps, checksums, safe copy paths, `shell=False`, environment allowlist, localhost only, owned-process identity, exclusive lock, bounded logs/retries, HTML escaping, SQL parameters and auditable transitions. Note that checksums are integrity checks, not cryptographic publisher authentication, and local deployment of untrusted Python code would be unsafe; forbid it explicitly.

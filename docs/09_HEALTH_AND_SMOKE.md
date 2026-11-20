@@ -1,0 +1,3 @@
+# Real HTTP validation
+
+Issue stdlib urllib HTTP GET to `http://127.0.0.1:<port>/health` with short timeout, parse JSON with schema `{"status":"ok","version":"..."}`. Require status 200, exact schema and version match; reject 503, malformed JSON, missing status, wrong version, timeout, refused connection. Optionally validate `/version`. Retry with bounded attempts and deterministic backoff; report individual attempts. After switching ACTIVE, verify active server again. No external HTTP requests or alternate host input. Unit tests use mock URLs/clients; integration tests run real localhost fixture process.

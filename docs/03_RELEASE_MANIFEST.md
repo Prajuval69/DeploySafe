@@ -1,0 +1,3 @@
+# Release metadata and integrity
+
+Each release directory has `app.py`, `app_config.json`, `release.json`. Manifest fields: `schema_version=1`, `release_id`, `entrypoint="app.py"`, `config_file`, `sha256` mapping for allowed files, and `description`. Forbid extra executable paths; allowlist the exact two regular files, no symlinks, no `..`, no absolute paths, no NUL, no path separators in release ID. Validate release ID pattern `^[0-9]+\.[0-9]+\.[0-9]+(?:-[a-z0-9-]+)?$` and lengths. Verify checksum before staging and again after copy to detect TOCTOU as far as practical. Cap file sizes. Never trust manifest-specified arbitrary commands.

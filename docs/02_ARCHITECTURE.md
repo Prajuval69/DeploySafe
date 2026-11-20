@@ -1,0 +1,3 @@
+# Modules and trust boundaries
+
+Keep `deploysafe` modules separated into config, security, releases, process manager, health client, state machine, SQLite, CLI, demo and read-only dashboard. `fixtures/demo_releases` is the only allowed release source by default; `.deploysafe_workspace` is the only writable root. Distinct root-relative `staging/`, `releases/`, `logs/`, `reports/`, `db/`, `locks/`, `runtime/`. User -> CLI -> validated policy -> manager -> stage & checks -> owned localhost Python child. Manager -> SQLite append-only audit. Dashboard -> read-only SQLite snapshot. No browser-to-shell bridge, and no capability to change real host services.

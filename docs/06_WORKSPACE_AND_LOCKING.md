@@ -1,0 +1,3 @@
+# Sandbox, locks and atomicity
+
+Workspace default `.deploysafe_workspace` directly inside repository. Reject attempts to point at `/`, `C:\`, system dirs, home dir, symlinks, or any path outside repo; ensure staged copy and cleanup never escape root. Lock with exclusive atomic create using `O_CREAT|O_EXCL`, session token and PID. Never break a lock just because it's old; require verified dead owner on local machine, or provide safe operator intervention message. Hold lock during deploy, rollback and state mutation; release in `finally`. Use transactions for DB transitions. Avoid deleting an active release under any circumstances.

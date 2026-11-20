@@ -1,0 +1,11 @@
+{
+  "description": "Deterministic localhost-only deploy test; no OS service changes",
+  "expected_active_version": "1.1.0",
+  "expected_failure_code": "CHECKSUM_MISMATCH",
+  "expected_outcome": "REJECTED_AND_RETAINED",
+  "initial_active_version": "1.1.0",
+  "release_id": "1.5.0-tampered",
+  "requires_admin": false,
+  "requires_cloud": false,
+  "scenario_id": "06_checksum_tamper"
+}

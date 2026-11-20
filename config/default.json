@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "workspace": ".deploysafe_workspace",
+  "bind": "127.0.0.1",
+  "active_port": 8765,
+  "candidate_port": 8766,
+  "dashboard_port": 8787,
+  "health_endpoint": "/health",
+  "version_endpoint": "/version",
+  "health_timeout_seconds": 0.5,
+  "health_attempts": 6,
+  "backoff_seconds": 0.15,
+  "allowed_release_root": "fixtures/demo_releases",
+  "max_release_file_bytes": 100000,
+  "retain_release_count": 5,
+  "logging_level": "INFO",
+  "read_only_dashboard": true,
+  "allow_remote_hosts": false,
+  "allow_shell_commands": false
+}

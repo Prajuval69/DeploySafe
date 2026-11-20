@@ -1,0 +1,3 @@
+# Rollback algorithm
+
+Preserve the last known healthy release and associated process until candidate passes health checks. Only then atomically commit active pointer and retire the previous owned process. If candidate fails, stop candidate, record FAIL, re-check previous healthy release and leave it active. If post-commit verification fails, revert pointer atomically to previous release, restore/run previous safe process if necessary, verify health and write `ROLLED_BACK`; otherwise `RECOVERY_FAILED` with actionable manual local steps. Never claim recovery succeeded without successful health check. Rollback may be explicitly requested only to a prior verified release in same sandbox; all changes are audited.

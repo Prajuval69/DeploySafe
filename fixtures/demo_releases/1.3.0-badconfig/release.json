@@ -1,0 +1,11 @@
+{
+  "config_file": "app_config.json",
+  "description": "Deterministic local-only test release",
+  "entrypoint": "app.py",
+  "release_id": "1.3.0-badconfig",
+  "schema_version": 1,
+  "sha256": {
+    "app.py": "918c22247aa993e697f7235f8271a1d53adc01905764908ef33a3cd4556533e4",
+    "app_config.json": "bf2c4a03f0b41b308dcdc89a24b9a8a1d62d7c7055fd49a4d6224ee6b8d1e63d"
+  }
+}

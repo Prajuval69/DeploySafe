@@ -1,0 +1,11 @@
+{
+  "description": "Deterministic localhost-only deploy test; no OS service changes",
+  "expected_active_version": "1.1.0",
+  "expected_failure_code": "HTTP_503",
+  "expected_outcome": "REJECTED_AND_RETAINED",
+  "initial_active_version": "1.1.0",
+  "release_id": "1.2.0-healthfail",
+  "requires_admin": false,
+  "requires_cloud": false,
+  "scenario_id": "03_health_503"
+}

@@ -1,0 +1,3 @@
+# Product scope and user stories
+
+**Goal:** teach release-engineering fundamentals through a genuine local app deployment loop. Personas: junior DevOps engineer running safe demos, reviewer inspecting change audits, recruiter assessing testable work. Required flows: initialize sandbox; list trusted candidate releases; validate manifest; preflight; start candidate; perform real HTTP health checks; activate good candidate; reject bad candidate with reason; restore prior healthy release; review history; see status in offline dashboard. Out of scope: operating system services, user apps, cloud environments, containers, arbitrary application installations, credential management, production rollouts.

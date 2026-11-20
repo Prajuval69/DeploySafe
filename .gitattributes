@@ -1,0 +1,2 @@
+fixtures/demo_releases/** -text
+scripts/linux/*.sh text eol=lf

@@ -1,0 +1,3 @@
+.deploysafe_workspace/
+__pycache__/
+*.py[cod]

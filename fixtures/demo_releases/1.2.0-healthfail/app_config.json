@@ -1,0 +1,5 @@
+{
+  "bind": "127.0.0.1",
+  "mode": "health_503",
+  "version": "1.2.0-healthfail"
+}

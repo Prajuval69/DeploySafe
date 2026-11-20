@@ -1,0 +1,3 @@
+# Lifecycle and transition invariants
+
+States: `STAGED`, `PREFLIGHT_OK`, `STARTING`, `HEALTHY`, `ACTIVE`, `FAILED`, `ROLLING_BACK`, `ROLLED_BACK`, `RECOVERY_FAILED`. Every transition must validate predecessor and write an event with timestamp, deployment ID, release ID, stage, outcome, error code and human-readable reason. ACTIVE must correspond to the last verified live healthy candidate; never mark it active just because process launched. Persist active pointer to an in-workspace JSON file through temporary write, fsync and atomic `os.replace`. Also record active pointer changes in SQLite. Startup recovery must reconcile pointer, audit and observed health.

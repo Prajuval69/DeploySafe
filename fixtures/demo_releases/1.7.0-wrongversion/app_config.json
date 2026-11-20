@@ -1,0 +1,6 @@
+{
+  "bind": "127.0.0.1",
+  "mode": "healthy",
+  "reported_version": "9.9.9",
+  "version": "1.7.0-wrongversion"
+}

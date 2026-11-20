@@ -1,0 +1,3 @@
+# Zero-dependency local dashboard
+
+Implement basic read-only dashboard using `http.server`, `html.escape`, inline CSS and SVG (no external JS, CDNs, fonts or API calls). Bind 127.0.0.1 on 8787. Show active version, last health check timestamp, recent deployments, successful/failed statuses, timeline of recent events, health test results, and rollback explanations. Clearly label fixture-generated vs real local service data. Sanitize all event descriptions; use read-only SQLite access; no arbitrary SQL in URL params and no action endpoints that start processes. CLI remains fully functional without dashboard.
